@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/done_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/save_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/weight_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/straighten_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/receipt_long_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/electric_meter_FILL1_wght300_GRAD0_opsz40.svg</file>
+    <file>icons/electric_meter_FILL1_wght300_GRAD0_opsz48.svg</file>
+  </qresource>
+</RCC>
