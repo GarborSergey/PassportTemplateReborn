@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>963</width>
-    <height>836</height>
+    <height>713</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,6 +58,12 @@ border-radius: 7px;</string>
        </property>
        <item>
         <widget class="QLabel" name="label_2">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -75,6 +81,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QLabel" name="label_10">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -406,6 +418,12 @@ border-radius: 7px;</string>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label_15">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>40</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -497,6 +515,12 @@ border: none;</string>
      </item>
      <item row="0" column="1">
       <widget class="QLabel" name="label_13">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>40</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -664,6 +688,12 @@ border-radius: 7px;</string>
       <layout class="QHBoxLayout" name="horizontalLayout_8">
        <item>
         <widget class="QLabel" name="label_17">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -687,7 +717,7 @@ border: none;</string>
          <property name="maximumSize">
           <size>
            <width>40</width>
-           <height>16777215</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -713,7 +743,7 @@ border: none;</string>
          <property name="maximumSize">
           <size>
            <width>40</width>
-           <height>16777215</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -856,10 +886,10 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>730</y>
-      <width>341</width>
-      <height>91</height>
+      <x>530</x>
+      <y>580</y>
+      <width>411</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1006,6 +1036,28 @@ border: none;</string>
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>cboxPanelAssignment</tabstop>
+  <tabstop>cboxPurposeOfTheIntroductoryControlUnit</tabstop>
+  <tabstop>cboxAdditionalEquipment</tabstop>
+  <tabstop>cboxProtectiveDevices</tabstop>
+  <tabstop>cboxIngressProtectionRating</tabstop>
+  <tabstop>cboxClimaticVersion</tabstop>
+  <tabstop>lineEdNameBox</tabstop>
+  <tabstop>lineEdDatabaseNumber</tabstop>
+  <tabstop>lineEdNominalCurrent</tabstop>
+  <tabstop>lineEdNominalShortCircuitCurrent</tabstop>
+  <tabstop>cboxSystemGrounding</tabstop>
+  <tabstop>lineEdInputCrossSection</tabstop>
+  <tabstop>cboxInstallationMethod</tabstop>
+  <tabstop>cboxProtectionClass</tabstop>
+  <tabstop>lineEdHeight</tabstop>
+  <tabstop>lineEdWidth</tabstop>
+  <tabstop>lineEdDepth</tabstop>
+  <tabstop>lineEdWeight</tabstop>
+  <tabstop>checkBoxCreateHint</tabstop>
+  <tabstop>btnCreatePassport</tabstop>
+ </tabstops>
  <resources>
   <include location="../res.qrc"/>
  </resources>
