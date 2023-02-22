@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>938</width>
-    <height>785</height>
+    <width>963</width>
+    <height>836</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,9 @@
    <string notr="true">background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(0, 0, 0, 255), stop:0.443182 rgba(255, 255, 255, 255));
 font-family: &quot;MADE Likes Slab&quot;;</string>
   </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true"/>
@@ -24,8 +27,8 @@ font-family: &quot;MADE Likes Slab&quot;;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>90</y>
+      <x>20</x>
+      <y>120</y>
       <width>921</width>
       <height>261</height>
      </rect>
@@ -95,7 +98,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="lablePanelAssignment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -117,7 +120,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="cboxPanelAssignment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -131,7 +134,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="lablePurposeOfTheIntroductoryControlUnit">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -153,7 +156,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_2">
+        <widget class="QComboBox" name="cboxPurposeOfTheIntroductoryControlUnit">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -167,7 +170,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="lableAdditionalEquipment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -189,7 +192,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_3">
+        <widget class="QComboBox" name="cboxAdditionalEquipment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -203,7 +206,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="lableProtectiveDevices">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -225,7 +228,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_4">
+        <widget class="QComboBox" name="cboxProtectiveDevices">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -239,7 +242,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_8">
+        <widget class="QLabel" name="lableIngressProtectionRating">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -261,7 +264,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_5">
+        <widget class="QComboBox" name="cboxIngressProtectionRating">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -275,7 +278,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="labelClimaticVersion">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -297,7 +300,7 @@ border: none;</string>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_6">
+        <widget class="QComboBox" name="cboxClimaticVersion">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -313,8 +316,8 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>7</x>
-      <y>360</y>
+      <x>20</x>
+      <y>390</y>
       <width>501</width>
       <height>316</height>
      </rect>
@@ -325,8 +328,101 @@ border: 1px solid rgba(0, 0, 0, 40);
 border-radius: 7px;</string>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="0">
+      <widget class="QLabel" name="labelInputCrossSection">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Максимальное сечение жил [Nxмм^2] </string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="labelProtectionClass">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Класс защиты </string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="labelInstallationMethod">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Способ установки </string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QComboBox" name="cboxProtectionClass">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_15">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+border: none;</string>
+       </property>
+       <property name="text">
+        <string>Общие данные</string>
+       </property>
+      </widget>
+     </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="label_19">
+      <widget class="QLabel" name="labelNominalCurrent">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -347,8 +443,8 @@ border-radius: 7px;</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit">
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdNominalCurrent">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -358,7 +454,7 @@ border-radius: 7px;</string>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_18">
+      <widget class="QLabel" name="labelDatabaseNumber">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -379,8 +475,8 @@ border-radius: 7px;</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_2">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdNameBox">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -389,8 +485,8 @@ border-radius: 7px;</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEdit_3">
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdDatabaseNumber">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -420,7 +516,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="lineEdNominalShortCircuitCurrent">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -430,7 +526,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QComboBox" name="comboBox_12">
+      <widget class="QComboBox" name="cboxSystemGrounding">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -440,7 +536,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="label_20">
+      <widget class="QLabel" name="labelNominalShortCircuitCurrent">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -462,7 +558,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QLabel" name="label_21">
+      <widget class="QLabel" name="labelSystemGrounding">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -484,7 +580,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QLineEdit" name="lineEdit_5">
+      <widget class="QLineEdit" name="lineEdInputCrossSection">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -494,110 +590,17 @@ border: none;</string>
       </widget>
      </item>
      <item row="7" column="1">
-      <widget class="QComboBox" name="comboBox_13">
+      <widget class="QComboBox" name="cboxInstallationMethod">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
          <pointsize>14</pointsize>
         </font>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_22">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Максимальное сечение жил [Nxмм^2] </string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="label_24">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Класс защиты </string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_23">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Способ установки </string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QComboBox" name="comboBox_14">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_15">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>18</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: none;
-border: none;</string>
-       </property>
-       <property name="text">
-        <string>Общие данные</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="label_14">
+      <widget class="QLabel" name="labelNameBox">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -623,8 +626,8 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>360</y>
+      <x>530</x>
+      <y>390</y>
       <width>411</width>
       <height>184</height>
      </rect>
@@ -635,6 +638,28 @@ border: 1px solid rgba(0, 0, 0, 40);
 border-radius: 7px;</string>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelHeight">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Высота [мм]</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0" colspan="2">
       <layout class="QHBoxLayout" name="horizontalLayout_8">
        <item>
@@ -711,43 +736,8 @@ border: none;</string>
        </item>
       </layout>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_16">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Высота [мм]</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_6">
-       <property name="font">
-        <font>
-         <family>MADE Likes Slab</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_25">
+      <widget class="QLabel" name="labelWidth">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -769,7 +759,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_7">
+      <widget class="QLineEdit" name="lineEdWidth">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -781,8 +771,18 @@ border: none;</string>
        </property>
       </widget>
      </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEdWeight">
+       <property name="font">
+        <font>
+         <family>MADE Likes Slab</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="label_26">
+      <widget class="QLabel" name="labelDepth">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -804,7 +804,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEdit_8">
+      <widget class="QLineEdit" name="lineEdDepth">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -817,7 +817,7 @@ border: none;</string>
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="label_27">
+      <widget class="QLabel" name="labelWeight">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -838,13 +838,16 @@ border: none;</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="lineEdit_9">
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdHeight">
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
@@ -853,8 +856,8 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>690</y>
+      <x>340</x>
+      <y>730</y>
       <width>341</width>
       <height>91</height>
      </rect>
@@ -866,7 +869,7 @@ border-radius: 7px;</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="checkBoxCreateHint">
        <property name="maximumSize">
         <size>
          <width>16677</width>
@@ -896,13 +899,17 @@ QCheckBox::indicator {
 }
 QCheckBox::indicator:checked {
     border: 3px solid black;
-    background-color: white;
-	background-image: url(:/icons/icons/done_FILL1_wght300_GRAD0_opsz40.svg);
-	background-size: 100px 100px;
+    background-color: grey;
 }</string>
        </property>
        <property name="text">
         <string>Создать подсказку для шильдика</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>1</width>
+         <height>1</height>
+        </size>
        </property>
        <property name="checkable">
         <bool>true</bool>
@@ -910,10 +917,22 @@ QCheckBox::indicator:checked {
        <property name="checked">
         <bool>true</bool>
        </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>200</number>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>97</number>
+       </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btnCreatePassport">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -961,6 +980,29 @@ margin-right: 1px;
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="lableCompanyLogo">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>0</y>
+      <width>351</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../res.qrc">:/icons/Pictures/eltat-logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
  </widget>

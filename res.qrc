@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Pictures/eltat-logo.png</file>
     <file>icons/done_FILL1_wght300_GRAD0_opsz40.svg</file>
     <file>icons/save_FILL1_wght300_GRAD0_opsz40.svg</file>
     <file>icons/weight_FILL1_wght300_GRAD0_opsz40.svg</file>

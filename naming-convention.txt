@@ -1,0 +1,42 @@
+# ------------------------------- NAMING -------------------------------
+# ******* BASE NAME CONSTRUCT *******
+# lable + name = labelName (all labels)
+# lineEd + name = LineEdName (all lineEdit)
+# cbox + name = cboxName (all comboBox)
+# btn + name = btnName (all pushButton)
+# checkBox + name = checkBoxName (all checkBox)
+# ************************************
+
+# ******* Условное обозначение *******
+# Назначение панели - PanelAssignment
+# Назначение вводного аппарата управления - PurposeOfTheIntroductoryControlUnit
+# Наличие дополнительного оборудования - AdditionalEquipment
+# Защитные аппараты на отходящих линиях - ProtectiveDevices
+# Степень защиты IP - IngressProtectionRating
+# Климатическое исполнение - ClimaticVersion
+# ************************************
+
+# *********** Общие данные ***********
+# Название щита - NameBox
+# Номер заказа в базе - DatabaseNumber
+# Номинальный ток устройства - NominalCurrent
+# Минимальный ток КЗ - NominalShortCircuitCurrent
+# Система заземления - SystemGrounding
+# Максимальное сечение жил - InputCrossSection
+# Способ установки - InstallationMethod
+# Класс защиты - ProtectionClass
+# ************************************
+
+# ***** Габаритные размеры, вес ******
+# Высота - Height
+# Ширина - Width
+# Глубина - Depth
+# Вес - Weight
+# ************************************
+
+# ************** Other ***************
+# Создать подсказку для шильдика - CreateHint
+# Создать паспорт - CreatePassport
+# Картинка с логотпом - CompanyLogo
+# ************************************
+# --------------------------------------------------------------------
