@@ -2,7 +2,7 @@ import sys
 from os import sep
 
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QMainWindow, QFileDialog
 from PyQt6.QtGui import QIntValidator, QDoubleValidator, QRegularExpressionValidator
 from PyQt6.QtCore import QRegularExpression
 
@@ -24,7 +24,7 @@ class PassportTemplate(QMainWindow):
         self.ui.cboxAdditionalEquipment.setCurrentIndex(-1)
         self.ui.cboxProtectiveDevices.setCurrentIndex(-1)
         self.ui.cboxIngressProtectionRating.setCurrentIndex(-1)
-        self.ui.cboxClimaticVersion.setCurrentIndex(-1)
+        self.ui.cboxClimaticVersion.setCurrentIndex(0)
         self.ui.cboxSystemGrounding.setCurrentIndex(-1)
         self.ui.cboxInstallationMethod.setCurrentIndex(-1)
         self.ui.cboxProtectionClass.setCurrentIndex(-1)
@@ -113,6 +113,12 @@ class PassportTemplate(QMainWindow):
         self.ui.lineEdHeight.setValidator(QIntValidator(0, 3000))
         self.ui.lineEdDepth.setValidator(QIntValidator(0, 20000))
         self.ui.lineEdWeight.setValidator(QIntValidator(0, 20000))
+
+        self.ui.btnCreatePassport.clicked.connect(self.create_passport)
+
+    def create_passport(self):
+        pathFile = QFileDialog.getExistingDirectory()
+        print(pathFile)
 
 
 if __name__ == "__main__":
