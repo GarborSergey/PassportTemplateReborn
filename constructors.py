@@ -1,4 +1,6 @@
 import datetime
+from os import sep
+from docxtpl import DocxTemplate
 
 
 class PassportException(Exception):
@@ -52,11 +54,29 @@ class Passport:
     weight = PassportData()
     protectionClass = PassportData()
     montagePlace = PassportData()
+    basicName = PassportData()
 
-    def __init__(self, panelAssignment, purposeOfTheIntroductoryControlUnit, additionalEquipment, protectiveDevices,
-                 ingressProtectionRating, climaticVersion, databaseNumber, nameBox, nominalCurrent,
-                 nominalShortCircuitCurrent, systemGrounding, installationMethod, inputCrossSection, height, width,
-                 depth, weight, protectionClass):
+    def __init__(
+            self,
+            panelAssignment,
+            purposeOfTheIntroductoryControlUnit,
+            additionalEquipment,
+            protectiveDevices,
+            ingressProtectionRating,
+            climaticVersion,
+            databaseNumber,
+            nameBox,
+            nominalCurrent,
+            nominalShortCircuitCurrent,
+            systemGrounding,
+            installationMethod,
+            inputCrossSection,
+            height,
+            width,
+            depth,
+            weight,
+            protectionClass
+                 ):
         self.panelAssignment = panelAssignment
         self.purposeOfTheIntroductoryControlUnit = purposeOfTheIntroductoryControlUnit
         self.additionalEquipment = additionalEquipment
@@ -76,8 +96,8 @@ class Passport:
         self.weight = weight
         self.protectionClass = protectionClass
         self.montagePlace = 'полу' if self.installationMethod == 'Напольный' else 'стене'
-        self._year = datetime.datetime.now().year
-        self._basicName = self.construct_base_name()
+        self.__year = datetime.datetime.now().year
+        self.basicName = self.construct_base_name()
 
     def construct_base_name(self):
         if self.protectiveDevices[0] == '1':
@@ -93,10 +113,10 @@ class Passport:
 
     def get_context(self):
         context = {
-            'basicName': self._basicName,
+            'basicName': self.basicName,
             'databaseNumber': self.databaseNumber,
             'nameBox': self.nameBox,
-            'year': self._year,
+            'year': self.__year,
             'nominalCurrent': self.nominalCurrent,
             'nominalShortCircuitCurrent': self.nominalShortCircuitCurrent,
             'ingressProtectionRating': self.ingressProtectionRating,
@@ -112,7 +132,34 @@ class Passport:
         }
         return context
 
+    def construct_file_name(self):
+        return f'{self.nameBox}_{self.databaseNumber}_passport'
 
-x = Passport('1', '1', '1', '1', '1', '1', '1', '1', '1', '1',
-             '1', '1', '1', '1', '1', '1', '1', '1',)
-print(x.get_context())
+    def construct_file_name_helper(self):
+        return f'{self.nameBox}_{self.databaseNumber}_helper'
+
+    def create_word_passport(self, path):
+        context = self.get_context()
+        fileName = self.construct_file_name()
+
+        savePathFile = path + sep + fileName + '.docx'
+
+        passportTemplate = DocxTemplate('wordDocuments' + sep + 'PassportTemplate.docx')
+
+        passportTemplate.render(context)
+
+        passportTemplate.save(savePathFile)
+
+    def create_word_helper(self, path):
+        context = self.get_context()
+        fileNameHelper = self.construct_file_name_helper()
+
+        savePathHelper = path + sep + fileNameHelper + '.docx'
+
+        helperTemplate = DocxTemplate('wordDocuments' + sep + 'HelpTemplate.docx')
+
+        helperTemplate.render(context)
+
+        helperTemplate.save(savePathHelper)
+
+
