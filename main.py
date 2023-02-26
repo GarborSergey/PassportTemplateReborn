@@ -9,7 +9,7 @@ from PyQt6.QtCore import QRegularExpression, Qt
 from mainwindow import Ui_MainWindow
 from constructors import Passport, PassportException
 
-VERSION = "0.0.0"
+VERSION = "0.1.0"
 
 
 class PassportTemplate(QMainWindow):
