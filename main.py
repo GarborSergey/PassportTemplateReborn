@@ -4,9 +4,10 @@ from os import sep
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QMainWindow, QFileDialog
 from PyQt6.QtGui import QIntValidator, QDoubleValidator, QRegularExpressionValidator
-from PyQt6.QtCore import QRegularExpression
+from PyQt6.QtCore import QRegularExpression, Qt
 
 from mainwindow import Ui_MainWindow
+from constructors import Passport, PassportException
 
 VERSION = "0.0.0"
 
@@ -16,6 +17,28 @@ class PassportTemplate(QMainWindow):
         super(PassportTemplate, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        # structure dict that consist, in key - invariable ui elements,
+        # in value - variable ui elements. for passport data
+        self.uiVariableElementsPassportData = {
+            self.ui.labelPanelAssignment: self.ui.cboxPanelAssignment,
+            self.ui.labelPurposeOfTheIntroductoryControlUnit: self.ui.cboxPurposeOfTheIntroductoryControlUnit,
+            self.ui.labelAdditionalEquipment: self.ui.cboxAdditionalEquipment,
+            self.ui.labelProtectiveDevices: self.ui.cboxProtectiveDevices,
+            self.ui.labelIngressProtectionRating: self.ui.cboxIngressProtectionRating,
+            self.ui.labelClimaticVersion: self.ui.cboxClimaticVersion,
+            self.ui.labelDatabaseNumber: self.ui.lineEdDatabaseNumber,
+            self.ui.labelNameBox: self.ui.lineEdNameBox,
+            self.ui.labelNominalCurrent: self.ui.lineEdNominalCurrent,
+            self.ui.labelNominalShortCircuitCurrent: self.ui.lineEdNominalShortCircuitCurrent,
+            self.ui.labelSystemGrounding: self.ui.cboxSystemGrounding,
+            self.ui.labelInstallationMethod: self.ui.cboxInstallationMethod,
+            self.ui.labelInputCrossSection: self.ui.lineEdInputCrossSection,
+            self.ui.labelHeight: self.ui.lineEdHeight,
+            self.ui.labelWidth: self.ui.lineEdWidth,
+            self.ui.labelDepth: self.ui.lineEdDepth,
+            self.ui.labelWeight: self.ui.lineEdWeight,
+            self.ui.labelProtectionClass: self.ui.cboxProtectionClass,
+        }
         self.init_UI()
 
     def __clear_all_cbox(self):
@@ -116,9 +139,53 @@ class PassportTemplate(QMainWindow):
 
         self.ui.btnCreatePassport.clicked.connect(self.create_passport)
 
+    def if_empty_set_red_color(self):
+        for elem in self.uiVariableElementsPassportData:
+            if type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QComboBox:
+                if self.uiVariableElementsPassportData[elem].currentText() == '':
+                    elem.setStyleSheet("color: red;")
+            elif type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QLineEdit:
+                if self.uiVariableElementsPassportData[elem].text() == '':
+                    elem.setStyleSheet("color: red;")
+
+    def set_black_color(self):
+        for elem in self.uiVariableElementsPassportData:
+            elem.setStyleSheet("color: black;")
+
     def create_passport(self):
         pathFile = QFileDialog.getExistingDirectory()
-        print(pathFile)
+        try:
+            passport = Passport(
+                self.ui.cboxPanelAssignment.currentText(),
+                self.ui.cboxPurposeOfTheIntroductoryControlUnit.currentText(),
+                self.ui.cboxAdditionalEquipment.currentText(),
+                self.ui.cboxProtectiveDevices.currentText(),
+                self.ui.cboxIngressProtectionRating.currentText(),
+                self.ui.cboxClimaticVersion.currentText(),
+                self.ui.lineEdDatabaseNumber.text(),
+                self.ui.lineEdNameBox.text(),
+                self.ui.lineEdNominalCurrent.text(),
+                self.ui.lineEdNominalShortCircuitCurrent.text(),
+                self.ui.cboxSystemGrounding.currentText(),
+                self.ui.cboxInstallationMethod.currentText(),
+                self.ui.lineEdInputCrossSection.text(),
+                self.ui.lineEdHeight.text(),
+                self.ui.lineEdWidth.text(),
+                self.ui.lineEdDepth.text(),
+                self.ui.lineEdWeight.text(),
+                self.ui.cboxProtectionClass.currentText()
+            )
+        except PassportException:
+            self.set_black_color()
+            self.if_empty_set_red_color()
+            return
+
+        passport.create_word_passport(pathFile)
+
+        if self.ui.checkBoxCreateHint.checkState() == Qt.CheckState.Checked:
+            passport.create_word_helper(pathFile)
+
+        self.set_black_color()
 
 
 if __name__ == "__main__":

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>963</width>
-    <height>713</height>
+    <width>961</width>
+    <height>706</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -110,7 +110,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
-        <widget class="QLabel" name="lablePanelAssignment">
+        <widget class="QLabel" name="labelPanelAssignment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -146,7 +146,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QLabel" name="lablePurposeOfTheIntroductoryControlUnit">
+        <widget class="QLabel" name="labelPurposeOfTheIntroductoryControlUnit">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -182,7 +182,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QLabel" name="lableAdditionalEquipment">
+        <widget class="QLabel" name="labelAdditionalEquipment">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -218,7 +218,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="lableProtectiveDevices">
+        <widget class="QLabel" name="labelProtectiveDevices">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -254,7 +254,7 @@ border: none;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="lableIngressProtectionRating">
+        <widget class="QLabel" name="labelIngressProtectionRating">
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>

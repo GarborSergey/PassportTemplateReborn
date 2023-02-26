@@ -1,6 +1,6 @@
 # ------------------------------- NAMING -------------------------------
 # ******* BASE NAME CONSTRUCT *******
-# lable + name = labelName (all labels)
+# label + name = labelName (all labels)
 # lineEd + name = LineEdName (all lineEdit)
 # cbox + name = cboxName (all comboBox)
 # btn + name = btnName (all pushButton)
