@@ -2,14 +2,14 @@ import sys
 from os import sep
 
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QMainWindow, QFileDialog
+from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
 from PyQt6.QtGui import QIntValidator, QDoubleValidator, QRegularExpressionValidator
 from PyQt6.QtCore import QRegularExpression, Qt
 
 from mainwindow import Ui_MainWindow
 from constructors import Passport, PassportException
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 
 class PassportTemplate(QMainWindow):
@@ -154,6 +154,8 @@ class PassportTemplate(QMainWindow):
 
     def create_passport(self):
         pathFile = QFileDialog.getExistingDirectory()
+        if not pathFile:
+            return
         try:
             passport = Passport(
                 self.ui.cboxPanelAssignment.currentText(),
@@ -178,6 +180,13 @@ class PassportTemplate(QMainWindow):
         except PassportException:
             self.set_black_color()
             self.if_empty_set_red_color()
+            error = QMessageBox()
+            error.setWindowTitle("Error")
+            error.setText("Заполните все поля!")
+            error.setInformativeText("некоторые поля незаполнены или заполнены некорректно, подсвечены красным")
+            error.setIcon(QMessageBox.Icon.Warning)
+            error.setStandardButtons(QMessageBox.StandardButton.Ok)
+            error.exec()
             return
 
         passport.create_word_passport(pathFile)
