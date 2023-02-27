@@ -1,14 +1,33 @@
 import sys
 
-from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
+from os import sep
+
+from PyQt6 import QtWidgets, QtGui
+from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QDialog
 from PyQt6.QtGui import QIntValidator, QDoubleValidator, QRegularExpressionValidator
 from PyQt6.QtCore import QRegularExpression, Qt
 
+from infowindow import Ui_Dialog
 from mainwindow import Ui_MainWindow
 from constructors import Passport, PassportException
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
+SOURCE_URL = "https://github.com/GarborSergey/PassportTemplateReborn"
+
+
+class InfoWindow(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_Dialog()
+        self.ui.setupUi(self)
+        self.init_UI()
+
+    def init_UI(self):
+        self.ui.labelVersionNumber.setText(f"VERSION - {VERSION}")
+        self.ui.labelSourceLink.setText(f'<a href="{SOURCE_URL}">GitHub</a>')
+        self.setWindowTitle("Info")
+        icon = QtGui.QIcon(f'icons{sep}info_FILL0_wght400_GRAD0_opsz40.ico')
+        self.setWindowIcon(icon)
 
 
 class PassportTemplate(QMainWindow):
@@ -16,6 +35,7 @@ class PassportTemplate(QMainWindow):
         super(PassportTemplate, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.info = InfoWindow()
         # structure dict that consist, in key - invariable ui elements,
         # in value - variable ui elements. for passport data
         self.uiVariableElementsPassportData = {
@@ -40,18 +60,16 @@ class PassportTemplate(QMainWindow):
         }
         self.init_UI()
 
-    def __clear_all_cbox(self):
-        self.ui.cboxPanelAssignment.setCurrentIndex(-1)
-        self.ui.cboxPurposeOfTheIntroductoryControlUnit.setCurrentIndex(-1)
-        self.ui.cboxAdditionalEquipment.setCurrentIndex(-1)
-        self.ui.cboxProtectiveDevices.setCurrentIndex(-1)
-        self.ui.cboxIngressProtectionRating.setCurrentIndex(-1)
-        self.ui.cboxClimaticVersion.setCurrentIndex(0)
-        self.ui.cboxSystemGrounding.setCurrentIndex(-1)
-        self.ui.cboxInstallationMethod.setCurrentIndex(-1)
-        self.ui.cboxProtectionClass.setCurrentIndex(-1)
+    def clear_all_input_field(self):
+        for elem in self.uiVariableElementsPassportData:
+            if type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QComboBox:
+                self.uiVariableElementsPassportData[elem].setCurrentIndex(-1)
+            elif type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QLineEdit:
+                self.uiVariableElementsPassportData[elem].setText(None)
 
     def init_UI(self):
+        icon = QtGui.QIcon(f'icons{sep}menu_book_FILL0_wght400_GRAD0_opsz40.ico')
+        self.setWindowIcon(icon)
         self.ui.cboxPanelAssignment.addItems([
             '1 - Вводное',
             '2 - Вводно-распределительное',
@@ -125,7 +143,7 @@ class PassportTemplate(QMainWindow):
             'II',
         ])
 
-        self.__clear_all_cbox()
+        self.clear_all_input_field()
 
         self.ui.lineEdDatabaseNumber.setValidator(QIntValidator(1000, 99999))
         self.ui.lineEdNominalCurrent.setValidator(QIntValidator(1, 9999))
@@ -137,6 +155,9 @@ class PassportTemplate(QMainWindow):
         self.ui.lineEdWeight.setValidator(QIntValidator(0, 20000))
 
         self.ui.btnCreatePassport.clicked.connect(self.create_passport)
+        self.ui.btnClearFields.clicked.connect(self.clear_all_input_field)
+        self.ui.btnInfo.clicked.connect(self.show_info)
+        # self.auto_input_all_field()
 
     def if_empty_set_red_color(self):
         for elem in self.uiVariableElementsPassportData:
@@ -146,6 +167,16 @@ class PassportTemplate(QMainWindow):
             elif type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QLineEdit:
                 if self.uiVariableElementsPassportData[elem].text() == '':
                     elem.setStyleSheet("color: red;")
+
+    def show_info(self):
+        self.info.show()
+
+    def auto_input_all_field(self):
+        for elem in self.uiVariableElementsPassportData:
+            if type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QComboBox:
+                self.uiVariableElementsPassportData[elem].setCurrentIndex(0)
+            elif type(self.uiVariableElementsPassportData[elem]) is QtWidgets.QLineEdit:
+                self.uiVariableElementsPassportData[elem].setText('TestCase')
 
     def set_black_color(self):
         for elem in self.uiVariableElementsPassportData:
@@ -182,7 +213,7 @@ class PassportTemplate(QMainWindow):
             error = QMessageBox()
             error.setWindowTitle("Error")
             error.setText("Заполните все поля!")
-            error.setInformativeText("некоторые поля незаполнены или заполнены некорректно, подсвечены красным")
+            error.setInformativeText("Некоторые поля незаполнены или заполнены некорректно, подсвечены красным")
             error.setIcon(QMessageBox.Icon.Warning)
             error.setStandardButtons(QMessageBox.StandardButton.Ok)
             error.exec()
@@ -194,6 +225,13 @@ class PassportTemplate(QMainWindow):
             passport.create_word_helper(pathFile)
 
         self.set_black_color()
+        success = QMessageBox()
+        success.setWindowTitle("Success")
+        success.setIcon(QMessageBox.Icon.Information)
+        success.setInformativeText("Паспорт успешно создан.")
+        success.setDetailedText(f"по пути: - {pathFile}{sep}{passport.construct_file_name()}")
+        success.setStandardButtons(QMessageBox.StandardButton.Ok)
+        success.exec()
 
 
 if __name__ == "__main__":
