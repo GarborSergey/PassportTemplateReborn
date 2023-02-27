@@ -2,13 +2,28 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>961</width>
-    <height>706</height>
+    <width>1100</width>
+    <height>714</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>714</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1100</width>
+    <height>714</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Auto Passport Consructor</string>
@@ -27,9 +42,9 @@ font-family: &quot;MADE Likes Slab&quot;;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>120</y>
-      <width>921</width>
+      <width>1081</width>
       <height>261</height>
      </rect>
     </property>
@@ -101,7 +116,7 @@ border: none;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../res.qrc">:/icons/icons/electric_meter_FILL1_wght300_GRAD0_opsz40.svg</pixmap>
+          <pixmap resource="../res.qrc">:/icons/icons/electric_meter_FILL0_wght400_GRAD0_opsz40.svg</pixmap>
          </property>
         </widget>
        </item>
@@ -133,6 +148,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxPanelAssignment">
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -169,6 +190,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxPurposeOfTheIntroductoryControlUnit">
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -205,6 +232,18 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxAdditionalEquipment">
+         <property name="minimumSize">
+          <size>
+           <width>526</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -241,6 +280,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxProtectiveDevices">
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -277,6 +322,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxIngressProtectionRating">
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -313,6 +364,12 @@ border: none;</string>
        </item>
        <item>
         <widget class="QComboBox" name="cboxClimaticVersion">
+         <property name="maximumSize">
+          <size>
+           <width>526</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>MADE Likes Slab</family>
@@ -328,9 +385,9 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>390</y>
-      <width>501</width>
+      <width>641</width>
       <height>316</height>
      </rect>
     </property>
@@ -408,6 +465,12 @@ border-radius: 7px;</string>
      </item>
      <item row="8" column="1">
       <widget class="QComboBox" name="cboxProtectionClass">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -463,6 +526,12 @@ border: none;</string>
      </item>
      <item row="3" column="1">
       <widget class="QLineEdit" name="lineEdNominalCurrent">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -495,6 +564,12 @@ border: none;</string>
      </item>
      <item row="1" column="1">
       <widget class="QLineEdit" name="lineEdNameBox">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -505,6 +580,12 @@ border: none;</string>
      </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="lineEdDatabaseNumber">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -541,6 +622,12 @@ border: none;</string>
      </item>
      <item row="4" column="1">
       <widget class="QLineEdit" name="lineEdNominalShortCircuitCurrent">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -551,6 +638,12 @@ border: none;</string>
      </item>
      <item row="5" column="1">
       <widget class="QComboBox" name="cboxSystemGrounding">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -605,6 +698,12 @@ border: none;</string>
      </item>
      <item row="6" column="1">
       <widget class="QLineEdit" name="lineEdInputCrossSection">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -615,6 +714,12 @@ border: none;</string>
      </item>
      <item row="7" column="1">
       <widget class="QComboBox" name="cboxInstallationMethod">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>MADE Likes Slab</family>
@@ -650,9 +755,9 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>660</x>
       <y>390</y>
-      <width>411</width>
+      <width>431</width>
       <height>184</height>
      </rect>
     </property>
@@ -734,7 +839,7 @@ border: none;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../res.qrc">:/icons/icons/straighten_FILL1_wght300_GRAD0_opsz40.svg</pixmap>
+          <pixmap resource="../res.qrc">:/icons/icons/straighten_FILL0_wght400_GRAD0_opsz40.svg</pixmap>
          </property>
         </widget>
        </item>
@@ -760,7 +865,7 @@ border: none;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../res.qrc">:/icons/icons/weight_FILL1_wght300_GRAD0_opsz40.svg</pixmap>
+          <pixmap resource="../res.qrc">:/icons/icons/weight_FILL0_wght400_GRAD0_opsz40.svg</pixmap>
          </property>
         </widget>
        </item>
@@ -886,10 +991,10 @@ border: none;</string>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>660</x>
       <y>580</y>
-      <width>411</width>
-      <height>121</height>
+      <width>431</width>
+      <height>125</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -922,14 +1027,14 @@ border-radius: 7px;</string>
 	border: none;
 }
 QCheckBox::indicator {
-    border: 3px solid black;
+    border: 1px solid black;
     width: 20px;
     height: 20px;
     border-radius: 6px;
 }
 QCheckBox::indicator:checked {
-    border: 3px solid black;
-    background-color: grey;
+    border: 1px solid black;
+    image: url(:/icons/icons/done_FILL1_wght300_GRAD0_opsz40.svg);
 }</string>
        </property>
        <property name="text">
@@ -945,7 +1050,7 @@ QCheckBox::indicator:checked {
         <bool>true</bool>
        </property>
        <property name="checked">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="autoRepeat">
         <bool>false</bool>
@@ -999,12 +1104,12 @@ margin-right: 1px;
        </property>
        <property name="icon">
         <iconset resource="../res.qrc">
-         <normaloff>:/icons/icons/save_FILL1_wght300_GRAD0_opsz40.svg</normaloff>:/icons/icons/save_FILL1_wght300_GRAD0_opsz40.svg</iconset>
+         <normaloff>:/icons/icons/save_FILL0_wght400_GRAD0_opsz40.svg</normaloff>:/icons/icons/save_FILL0_wght400_GRAD0_opsz40.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>30</width>
-         <height>30</height>
+         <width>40</width>
+         <height>40</height>
         </size>
        </property>
       </widget>
@@ -1014,10 +1119,10 @@ margin-right: 1px;
    <widget class="QLabel" name="lableCompanyLogo">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>0</y>
-      <width>351</width>
-      <height>131</height>
+      <x>10</x>
+      <y>-10</y>
+      <width>441</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1028,10 +1133,92 @@ border: none;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../res.qrc">:/icons/Pictures/eltat-logo.png</pixmap>
+     <pixmap resource="../res.qrc">:/icons/Pictures/eltat-logo-pc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClearFields">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>30</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: none;
+border: 1px solid black;
+border-radius: 7px;
+}
+
+QPushButton:hover {
+background-color: rgb(25, 25, 25, 80);
+}
+
+QPushButton:pressed {
+color: white;
+background-color: rgb(25, 25, 25, 95);
+margin-top: 1px;
+margin-right: 1px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../res.qrc">
+      <normaloff>:/icons/icons/delete_FILL0_wght400_GRAD0_opsz40.svg</normaloff>:/icons/icons/delete_FILL0_wght400_GRAD0_opsz40.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnInfo">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>30</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: none;
+border: 1px solid black;
+border-radius: 7px;
+}
+
+QPushButton:hover {
+background-color: rgb(25, 25, 25, 80);
+}
+
+QPushButton:pressed {
+color: white;
+background-color: rgb(25, 25, 25, 95);
+margin-top: 1px;
+margin-right: 1px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../res.qrc">
+      <normaloff>:/icons/icons/info_FILL0_wght400_GRAD0_opsz40.svg</normaloff>:/icons/icons/info_FILL0_wght400_GRAD0_opsz40.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -1055,7 +1242,6 @@ border: none;</string>
   <tabstop>lineEdWidth</tabstop>
   <tabstop>lineEdDepth</tabstop>
   <tabstop>lineEdWeight</tabstop>
-  <tabstop>checkBoxCreateHint</tabstop>
   <tabstop>btnCreatePassport</tabstop>
  </tabstops>
  <resources>

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui\mainwindow.ui'
+# Form implementation generated from reading ui file 'ui/mainwindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -12,7 +12,10 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(961, 706)
+        MainWindow.setEnabled(True)
+        MainWindow.resize(1100, 714)
+        MainWindow.setMinimumSize(QtCore.QSize(1100, 714))
+        MainWindow.setMaximumSize(QtCore.QSize(1100, 714))
         MainWindow.setStyleSheet("background-color: qconicalgradient(cx:1, cy:1, angle:0, stop:0 rgba(0, 0, 0, 255), stop:0.443182 rgba(255, 255, 255, 255));\n"
 "font-family: \"MADE Likes Slab\";")
         MainWindow.setAnimated(False)
@@ -20,7 +23,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(20, 120, 921, 261))
+        self.frame.setGeometry(QtCore.QRect(10, 120, 1081, 261))
         self.frame.setStyleSheet("background-color: rgba(255, 255, 255, 30);\n"
 "border: 1px solid rgba(0, 0, 0, 40);\n"
 "border-radius: 7px;")
@@ -50,7 +53,7 @@ class Ui_MainWindow(object):
         self.label_10.setStyleSheet("background-color: none;\n"
 "border: none;")
         self.label_10.setText("")
-        self.label_10.setPixmap(QtGui.QPixmap(":/icons/icons/electric_meter_FILL1_wght300_GRAD0_opsz40.svg"))
+        self.label_10.setPixmap(QtGui.QPixmap("icons/electric_meter_FILL0_wght400_GRAD0_opsz40.svg"))
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_7.addWidget(self.label_10)
         self.verticalLayout.addLayout(self.horizontalLayout_7)
@@ -67,6 +70,7 @@ class Ui_MainWindow(object):
         self.labelPanelAssignment.setObjectName("labelPanelAssignment")
         self.horizontalLayout_6.addWidget(self.labelPanelAssignment)
         self.cboxPanelAssignment = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxPanelAssignment.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -87,6 +91,7 @@ class Ui_MainWindow(object):
         self.labelPurposeOfTheIntroductoryControlUnit.setObjectName("labelPurposeOfTheIntroductoryControlUnit")
         self.horizontalLayout_5.addWidget(self.labelPurposeOfTheIntroductoryControlUnit)
         self.cboxPurposeOfTheIntroductoryControlUnit = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxPurposeOfTheIntroductoryControlUnit.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -107,6 +112,8 @@ class Ui_MainWindow(object):
         self.labelAdditionalEquipment.setObjectName("labelAdditionalEquipment")
         self.horizontalLayout_4.addWidget(self.labelAdditionalEquipment)
         self.cboxAdditionalEquipment = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxAdditionalEquipment.setMinimumSize(QtCore.QSize(526, 0))
+        self.cboxAdditionalEquipment.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -127,6 +134,7 @@ class Ui_MainWindow(object):
         self.labelProtectiveDevices.setObjectName("labelProtectiveDevices")
         self.horizontalLayout_3.addWidget(self.labelProtectiveDevices)
         self.cboxProtectiveDevices = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxProtectiveDevices.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -147,6 +155,7 @@ class Ui_MainWindow(object):
         self.labelIngressProtectionRating.setObjectName("labelIngressProtectionRating")
         self.horizontalLayout_2.addWidget(self.labelIngressProtectionRating)
         self.cboxIngressProtectionRating = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxIngressProtectionRating.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -167,6 +176,7 @@ class Ui_MainWindow(object):
         self.labelClimaticVersion.setObjectName("labelClimaticVersion")
         self.horizontalLayout.addWidget(self.labelClimaticVersion)
         self.cboxClimaticVersion = QtWidgets.QComboBox(parent=self.frame)
+        self.cboxClimaticVersion.setMaximumSize(QtCore.QSize(526, 16777215))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -175,7 +185,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.cboxClimaticVersion)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.frame1 = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame1.setGeometry(QtCore.QRect(20, 390, 501, 316))
+        self.frame1.setGeometry(QtCore.QRect(10, 390, 641, 316))
         self.frame1.setStyleSheet("background-color: rgba(255, 255, 255, 30);\n"
 "border: 1px solid rgba(0, 0, 0, 40);\n"
 "border-radius: 7px;")
@@ -213,6 +223,7 @@ class Ui_MainWindow(object):
         self.labelInstallationMethod.setObjectName("labelInstallationMethod")
         self.gridLayout.addWidget(self.labelInstallationMethod, 7, 0, 1, 1)
         self.cboxProtectionClass = QtWidgets.QComboBox(parent=self.frame1)
+        self.cboxProtectionClass.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -240,6 +251,7 @@ class Ui_MainWindow(object):
         self.labelNominalCurrent.setObjectName("labelNominalCurrent")
         self.gridLayout.addWidget(self.labelNominalCurrent, 3, 0, 1, 1)
         self.lineEdNominalCurrent = QtWidgets.QLineEdit(parent=self.frame1)
+        self.lineEdNominalCurrent.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -257,6 +269,7 @@ class Ui_MainWindow(object):
         self.labelDatabaseNumber.setObjectName("labelDatabaseNumber")
         self.gridLayout.addWidget(self.labelDatabaseNumber, 2, 0, 1, 1)
         self.lineEdNameBox = QtWidgets.QLineEdit(parent=self.frame1)
+        self.lineEdNameBox.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -264,6 +277,7 @@ class Ui_MainWindow(object):
         self.lineEdNameBox.setObjectName("lineEdNameBox")
         self.gridLayout.addWidget(self.lineEdNameBox, 1, 1, 1, 1)
         self.lineEdDatabaseNumber = QtWidgets.QLineEdit(parent=self.frame1)
+        self.lineEdDatabaseNumber.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -279,10 +293,11 @@ class Ui_MainWindow(object):
         self.label_13.setStyleSheet("background-color: none;\n"
 "border: none;")
         self.label_13.setText("")
-        self.label_13.setPixmap(QtGui.QPixmap(":/icons/icons/receipt_long_FILL1_wght300_GRAD0_opsz40.svg"))
+        self.label_13.setPixmap(QtGui.QPixmap("icons/receipt_long_FILL1_wght300_GRAD0_opsz40.svg"))
         self.label_13.setObjectName("label_13")
         self.gridLayout.addWidget(self.label_13, 0, 1, 1, 1)
         self.lineEdNominalShortCircuitCurrent = QtWidgets.QLineEdit(parent=self.frame1)
+        self.lineEdNominalShortCircuitCurrent.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -290,6 +305,7 @@ class Ui_MainWindow(object):
         self.lineEdNominalShortCircuitCurrent.setObjectName("lineEdNominalShortCircuitCurrent")
         self.gridLayout.addWidget(self.lineEdNominalShortCircuitCurrent, 4, 1, 1, 1)
         self.cboxSystemGrounding = QtWidgets.QComboBox(parent=self.frame1)
+        self.cboxSystemGrounding.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -317,6 +333,7 @@ class Ui_MainWindow(object):
         self.labelSystemGrounding.setObjectName("labelSystemGrounding")
         self.gridLayout.addWidget(self.labelSystemGrounding, 5, 0, 1, 1)
         self.lineEdInputCrossSection = QtWidgets.QLineEdit(parent=self.frame1)
+        self.lineEdInputCrossSection.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -324,6 +341,7 @@ class Ui_MainWindow(object):
         self.lineEdInputCrossSection.setObjectName("lineEdInputCrossSection")
         self.gridLayout.addWidget(self.lineEdInputCrossSection, 6, 1, 1, 1)
         self.cboxInstallationMethod = QtWidgets.QComboBox(parent=self.frame1)
+        self.cboxInstallationMethod.setMaximumSize(QtCore.QSize(200, 200))
         font = QtGui.QFont()
         font.setFamily("MADE Likes Slab")
         font.setPointSize(14)
@@ -341,7 +359,7 @@ class Ui_MainWindow(object):
         self.labelNameBox.setObjectName("labelNameBox")
         self.gridLayout.addWidget(self.labelNameBox, 1, 0, 1, 1)
         self.frame2 = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame2.setGeometry(QtCore.QRect(530, 390, 411, 184))
+        self.frame2.setGeometry(QtCore.QRect(660, 390, 431, 184))
         self.frame2.setStyleSheet("background-color: rgba(255, 255, 255, 30);\n"
 "border: 1px solid rgba(0, 0, 0, 40);\n"
 "border-radius: 7px;")
@@ -380,7 +398,7 @@ class Ui_MainWindow(object):
         self.label_28.setStyleSheet("background-color: none;\n"
 "border: none;")
         self.label_28.setText("")
-        self.label_28.setPixmap(QtGui.QPixmap(":/icons/icons/straighten_FILL1_wght300_GRAD0_opsz40.svg"))
+        self.label_28.setPixmap(QtGui.QPixmap("icons/straighten_FILL0_wght400_GRAD0_opsz40.svg"))
         self.label_28.setObjectName("label_28")
         self.horizontalLayout_8.addWidget(self.label_28)
         self.label_29 = QtWidgets.QLabel(parent=self.frame2)
@@ -392,7 +410,7 @@ class Ui_MainWindow(object):
         self.label_29.setStyleSheet("background-color: none;\n"
 "border: none;")
         self.label_29.setText("")
-        self.label_29.setPixmap(QtGui.QPixmap(":/icons/icons/weight_FILL1_wght300_GRAD0_opsz40.svg"))
+        self.label_29.setPixmap(QtGui.QPixmap("icons/weight_FILL0_wght400_GRAD0_opsz40.svg"))
         self.label_29.setObjectName("label_29")
         self.horizontalLayout_8.addWidget(self.label_29)
         self.gridLayout_2.addLayout(self.horizontalLayout_8, 0, 0, 1, 2)
@@ -458,7 +476,7 @@ class Ui_MainWindow(object):
         self.lineEdHeight.setObjectName("lineEdHeight")
         self.gridLayout_2.addWidget(self.lineEdHeight, 1, 1, 1, 1)
         self.frame3 = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame3.setGeometry(QtCore.QRect(530, 580, 411, 121))
+        self.frame3.setGeometry(QtCore.QRect(660, 580, 431, 125))
         self.frame3.setStyleSheet("background-color: rgba(255, 255, 255, 30);\n"
 "border: 1px solid rgba(0, 0, 0, 40);\n"
 "border-radius: 7px;")
@@ -480,18 +498,18 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "}\n"
 "QCheckBox::indicator {\n"
-"    border: 3px solid black;\n"
+"    border: 1px solid black;\n"
 "    width: 20px;\n"
 "    height: 20px;\n"
 "    border-radius: 6px;\n"
 "}\n"
 "QCheckBox::indicator:checked {\n"
-"    border: 3px solid black;\n"
-"    background-color: grey;\n"
+"    border: 1px solid black;\n"
+"    image: url(icons/done_FILL1_wght300_GRAD0_opsz40.svg);\n"
 "}")
         self.checkBoxCreateHint.setIconSize(QtCore.QSize(1, 1))
         self.checkBoxCreateHint.setCheckable(True)
-        self.checkBoxCreateHint.setChecked(True)
+        self.checkBoxCreateHint.setChecked(False)
         self.checkBoxCreateHint.setAutoRepeat(False)
         self.checkBoxCreateHint.setAutoExclusive(False)
         self.checkBoxCreateHint.setAutoRepeatDelay(200)
@@ -522,19 +540,67 @@ class Ui_MainWindow(object):
 "margin-right: 1px;\n"
 "}")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/icons/save_FILL1_wght300_GRAD0_opsz40.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("icons/save_FILL0_wght400_GRAD0_opsz40.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btnCreatePassport.setIcon(icon)
-        self.btnCreatePassport.setIconSize(QtCore.QSize(30, 30))
+        self.btnCreatePassport.setIconSize(QtCore.QSize(40, 40))
         self.btnCreatePassport.setObjectName("btnCreatePassport")
         self.verticalLayout_2.addWidget(self.btnCreatePassport)
         self.lableCompanyLogo = QtWidgets.QLabel(parent=self.centralwidget)
-        self.lableCompanyLogo.setGeometry(QtCore.QRect(30, 0, 351, 131))
+        self.lableCompanyLogo.setGeometry(QtCore.QRect(10, -10, 441, 151))
         self.lableCompanyLogo.setStyleSheet("background-color: none;\n"
 "border: none;")
         self.lableCompanyLogo.setText("")
-        self.lableCompanyLogo.setPixmap(QtGui.QPixmap("Pictures/eltat-logo.png"))
+        self.lableCompanyLogo.setPixmap(QtGui.QPixmap("Pictures/eltat-logo-pc.png"))
         self.lableCompanyLogo.setScaledContents(True)
         self.lableCompanyLogo.setObjectName("lableCompanyLogo")
+        self.btnClearFields = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.btnClearFields.setGeometry(QtCore.QRect(980, 30, 40, 40))
+        self.btnClearFields.setStyleSheet("QPushButton {\n"
+"background-color: none;\n"
+"border: 1px solid black;\n"
+"border-radius: 7px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(25, 25, 25, 80);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"color: white;\n"
+"background-color: rgb(25, 25, 25, 95);\n"
+"margin-top: 1px;\n"
+"margin-right: 1px;\n"
+"}")
+        self.btnClearFields.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("icons/delete_FILL0_wght400_GRAD0_opsz40.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnClearFields.setIcon(icon1)
+        self.btnClearFields.setIconSize(QtCore.QSize(40, 40))
+        self.btnClearFields.setObjectName("btnClearFields")
+        self.btnInfo = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.btnInfo.setGeometry(QtCore.QRect(1030, 30, 40, 40))
+        self.btnInfo.setStyleSheet("QPushButton {\n"
+"background-color: none;\n"
+"border: 1px solid black;\n"
+"border-radius: 7px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"background-color: rgb(25, 25, 25, 80);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"color: white;\n"
+"background-color: rgb(25, 25, 25, 95);\n"
+"margin-top: 1px;\n"
+"margin-right: 1px;\n"
+"}")
+        self.btnInfo.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("icons/info_FILL0_wght400_GRAD0_opsz40.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btnInfo.setIcon(icon2)
+        self.btnInfo.setIconSize(QtCore.QSize(40, 40))
+        self.btnInfo.setObjectName("btnInfo")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -556,8 +622,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.lineEdHeight, self.lineEdWidth)
         MainWindow.setTabOrder(self.lineEdWidth, self.lineEdDepth)
         MainWindow.setTabOrder(self.lineEdDepth, self.lineEdWeight)
-        MainWindow.setTabOrder(self.lineEdWeight, self.checkBoxCreateHint)
-        MainWindow.setTabOrder(self.checkBoxCreateHint, self.btnCreatePassport)
+        MainWindow.setTabOrder(self.lineEdWeight, self.btnCreatePassport)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

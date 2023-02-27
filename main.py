@@ -1,5 +1,4 @@
 import sys
-from os import sep
 
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
@@ -9,7 +8,7 @@ from PyQt6.QtCore import QRegularExpression, Qt
 from mainwindow import Ui_MainWindow
 from constructors import Passport, PassportException
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 
 
 class PassportTemplate(QMainWindow):

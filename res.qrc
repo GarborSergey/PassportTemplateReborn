@@ -1,6 +1,12 @@
 <RCC>
   <qresource prefix="icons">
-    <file>Pictures/eltat-logo.png</file>
+    <file>Pictures/eltat-logo-pc.png</file>
+    <file>icons/save_FILL0_wght400_GRAD0_opsz40.svg</file>
+    <file>icons/electric_meter_FILL0_wght400_GRAD0_opsz40.svg</file>
+    <file>icons/weight_FILL0_wght400_GRAD0_opsz40.svg</file>
+    <file>icons/straighten_FILL0_wght400_GRAD0_opsz40.svg</file>
+    <file>icons/info_FILL0_wght400_GRAD0_opsz40.svg</file>
+    <file>icons/delete_FILL0_wght400_GRAD0_opsz40.svg</file>
     <file>icons/done_FILL1_wght300_GRAD0_opsz40.svg</file>
     <file>icons/save_FILL1_wght300_GRAD0_opsz40.svg</file>
     <file>icons/weight_FILL1_wght300_GRAD0_opsz40.svg</file>
