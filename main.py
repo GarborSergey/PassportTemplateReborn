@@ -11,7 +11,7 @@ from infowindow import Ui_Dialog
 from mainwindow import Ui_MainWindow
 from constructors import Passport, PassportException
 
-VERSION = "0.1.3"
+VERSION = "0.2.0"
 SOURCE_URL = "https://github.com/GarborSergey/PassportTemplateReborn"
 
 
